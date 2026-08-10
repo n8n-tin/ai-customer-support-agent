@@ -259,6 +259,7 @@ Add additional communication channels such as WhatsApp
 ---
 ## 📁 Project Structure
 
+```
 ai-customer-support-agent/
 │
 ├── docs/
@@ -268,7 +269,7 @@ ai-customer-support-agent/
 ├── screenshots/
 │
 └── README.md
-
+```
 ---
 ## 👩‍💻 Project Purpose
 

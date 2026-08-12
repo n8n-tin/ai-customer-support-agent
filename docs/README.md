@@ -201,7 +201,7 @@ This provides visibility into automation failures and supports troubleshooting.
 
 The complete n8n workflow demonstrates the end-to-end customer support and lead management automation.
 
-![AI Customer Support & Lead Management Workflow](screenshots/workflow-final.png)
+![AI Customer Support & Lead Management Workflow](https://github.com/n8n-tin/ai-customer-support-agent/blob/main/screenshots/workflow-final.png)
 
 ### CRM Test Results
 
@@ -213,7 +213,7 @@ The workflow records customer inquiries, AI responses, lead scores, intent, prio
 
 High-priority leads automatically trigger an internal notification for follow-up.
 
-![High-Priority Lead Notification](screenshots/lead-notification.png)
+![High-Priority Lead Notification](https://github.com/n8n-tin/ai-customer-support-agent/blob/main/screenshots/lead-notification.png)
 
 
 ---

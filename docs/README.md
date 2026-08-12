@@ -194,6 +194,29 @@ Execution URL
 This provides visibility into automation failures and supports troubleshooting.
 
 ---
+
+## 📸 Workflow Screenshots
+
+### n8n Automation Workflow
+
+The complete n8n workflow demonstrates the end-to-end customer support and lead management automation.
+
+![AI Customer Support & Lead Management Workflow](screenshots/workflow-final.png)
+
+### CRM Test Results
+
+The workflow records customer inquiries, AI responses, lead scores, intent, priority, and human escalation status in Google Sheets.
+
+![CRM Test Results](screenshots/crm-test-results.png)
+
+### High-Priority Lead Notification
+
+High-priority leads automatically trigger an internal notification for follow-up.
+
+![High-Priority Lead Notification](screenshots/lead-notification.png)
+
+
+---
 ## 🧪 Testing
 
 The workflow was tested against multiple business scenarios, including:

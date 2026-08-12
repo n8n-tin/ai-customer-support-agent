@@ -207,7 +207,7 @@ The complete n8n workflow demonstrates the end-to-end customer support and lead 
 
 The workflow records customer inquiries, AI responses, lead scores, intent, priority, and human escalation status in Google Sheets.
 
-![CRM Test Results](screenshots/crm-test-results.png)
+![CRM Test Results](screenshots/crm-test-results.png) 
 
 ### High-Priority Lead Notification
 

@@ -29,7 +29,7 @@ Verify that the workflow receives a customer question correctly.
 
 **Customer Name:** John Smith
 
-**Email:** john@email.com
+**Email:** john@example.com
 
 **Question:**
 

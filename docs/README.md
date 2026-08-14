@@ -69,7 +69,7 @@ High Priority?
    ↓       ↓
   YES      NO
    ↓       ↓
-Notify    CRM
+Notify     |
 Sales      │
    ↓       │
    └───┬───┘

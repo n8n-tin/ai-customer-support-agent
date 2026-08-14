@@ -65,10 +65,17 @@ Qualify Lead
 Evaluate Lead
        ↓
 High Priority?
-       ↓ YES
-Notify Sales Team
+   ┌───┴───┐
+   ↓       ↓
+  YES      NO
+   ↓       ↓
+Notify    CRM
+Sales      │
+   ↓       │
+   └───┬───┘
        ↓
-     CRM
+      CRM
+
 ```
 
 
@@ -278,6 +285,10 @@ Add analytics and reporting
 Add authentication and production security
 Add monitoring and alerting
 Add additional communication channels such as WhatsApp
+Add authentication and input validation
+Add persistent conversation history
+Add retry logic for external service failures
+Add production monitoring
 
 ---
 ## 📁 Project Structure
@@ -294,30 +305,3 @@ ai-customer-support-agent/
 └── README.md
 ```
 ---
-## 👩‍💻 Project Purpose
-
-This project was created as a practical demonstration of AI workflow automation, business process automation, structured AI outputs, conditional logic, human-in-the-loop escalation, and CRM integration.
-
-It demonstrates how business requirements can be translated into an automated workflow using n8n and AI.
-
----
-## 📌 Key Skills Demonstrated
-
-AI Workflow Automation
-n8n
-Google Gemini
-Prompt Engineering
-Structured AI Output
-Business Process Automation
-Lead Qualification
-Lead Scoring
-Conditional Logic
-Human-in-the-Loop Automation
-CRM Integration
-Error Handling
-Workflow Testing
-Process Mapping
-
----
-
-

@@ -158,6 +158,79 @@ The lead should be classified as **Warm** or **Hot**, depending on the scoring c
 
 ---
 
+## Test 07 — Human Escalation
+
+### Objective
+
+Verify that inquiries requiring human assistance trigger an internal support notification.
+
+### Test Input
+
+> Do you provide SAP S/4HANA implementation and Brazilian tax configuration services?
+
+### Expected Result
+
+- Human escalation should be TRUE.
+- An email should be sent to the support team.
+- The customer interaction should continue to be recorded in the CRM.
+
+### Result
+
+✅ Passed
+
+---
+
+## Test 08 — High-Priority Lead Notification
+
+### Objective
+
+Verify that high-intent customers are identified and trigger an internal sales notification.
+
+### Test Input
+
+> We want to hire your company to automate our SAP finance processes. Can you integrate with SAP S/4HANA and support Brazilian tax requirements?
+
+### Expected Result
+
+- Lead intent = Purchase Intent
+- Lead score indicates a high-priority opportunity.
+- Priority = High.
+- Sales notification is sent.
+- Customer interaction is recorded in the CRM.
+
+### Result
+
+✅ Passed
+
+---
+## Test 09 — Error Handling
+
+### Objective
+
+Verify that the Error Handler workflow can capture workflow errors and send an email notification.
+
+### Test
+
+The Error Handler workflow was manually tested using a simulated workflow error.
+
+### Expected Result
+
+- Error details are captured.
+- Error Handler receives the error.
+- Gmail notification is generated.
+
+### Result
+
+⚠️ Partially Tested
+
+### Notes
+
+The Error Handler and Gmail notification were successfully validated independently.
+
+Automatic error-trigger behavior during production execution remains a future validation step.
+
+---
+
 ## Overall Testing Status
 
 | Test | Status |
@@ -168,19 +241,10 @@ The lead should be classified as **Warm** or **Hot**, depending on the scoring c
 | Unknown Question | ✅ Passed |
 | Google Sheets Logging | ✅ Passed |
 | Lead Qualification | ✅ Passed |
-
+| Human Escalation | ✅ Passed |
+| High-Priority Lead Notification | ✅ Passed |
+| Error Handler | ⚠️ Partially Tested |
 ---
 
-## Future Testing
 
-Future versions will test:
-
-- Webhook customer messages
-- Website chat integration
-- WhatsApp integration
-- Facebook Messenger integration
-- Human escalation
-- CRM integration
-- Error handling
-- Email notifications
 - Multiple simultaneous conversations

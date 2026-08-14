@@ -1,4 +1,4 @@
-# 🤖 AI Customer Support & Lead Management
+# 🤖 AI Customer Support & Lead Management Automation
 
 An AI-powered customer support and lead qualification automation built with n8n and Google Gemini.
 

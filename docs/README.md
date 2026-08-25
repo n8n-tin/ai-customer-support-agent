@@ -1,8 +1,11 @@
-# 🤖 AI Customer Support & Lead Management Automation
+# 🤖 AI Customer Support & Lead Management System
 
-An AI-powered customer support and lead qualification automation built with n8n and Google Gemini.
+An AI-powered customer support and lead management automation built with n8n and Google Gemini.
 
-The workflow helps businesses respond to customer inquiries, identify when human intervention is required, qualify leads, prioritize high-value opportunities, and record customer interactions in a CRM.
+The workflow helps businesses respond to customer inquiries, determine when human intervention is required, qualify and prioritize leads, and record customer interactions in a CRM.
+
+This project demonstrates how **AI and workflow automation can be applied to a practical business process** to reduce manual work, improve customer response handling, and identify high-value opportunities.
+
 
 ---
 
@@ -17,7 +20,7 @@ Customer inquiries often require manual handling, which can lead to:
 - Difficulty identifying high-priority customers
 - Lack of a structured escalation process
 
-The goal of this project was to automate the initial customer support and lead qualification process while keeping human intervention available when needed.
+The goal of this project was to automate the initial customer support and lead management process while keeping human intervention available when needed.
 
 ---
 
@@ -34,7 +37,7 @@ I designed an AI-powered workflow that:
 7. Identifies high-priority opportunities
 8. Notifies the appropriate team
 9. Records the interaction in a CRM
-10. Provides an error-handling workflow for monitoring failures
+10. Monitors workflow failures through a dedicated error-handling workflow
 
 
 ---
@@ -64,7 +67,7 @@ Qualify Lead
        ↓
 Evaluate Lead
        ↓
-High Priority?
+High-Priority Lead?
    ┌───┴───┐
    ↓       ↓
   YES      NO
@@ -74,32 +77,32 @@ Sales      │
    ↓       │
    └───┬───┘
        ↓
-      CRM
+ Record in CRM
 
 ```
 
 
 ## ⚙️ How the Workflow Works
 
-1. Customer Inquiry
+**1. Customer Inquiry**
 
 The workflow receives a customer question or request.
 
-2. Capture Customer Data
+**2. Capture Customer Data**
 
 Customer information and the inquiry are captured for processing and record keeping.
 
-3. Retrieve Knowledge Base
+**3. Retrieve Knowledge Base**
 
 The workflow retrieves information from a controlled Google Docs Knowledge Base.
 
 This helps keep AI responses grounded in approved business information.
 
-4. Generate AI Response
+**4. Generate AI Response**
 
 Google Gemini generates a customer-facing response based on the available Knowledge Base information.
 
-5. Check Human Escalation
+**5. Check Human Escalation**
 
 The workflow determines whether the inquiry requires human intervention.
 
@@ -117,7 +120,7 @@ Continue to Lead Qualification
 
 Both paths continue to lead qualification.
 
-6. Qualify Lead
+**6. Qualify Lead**
 
 The AI evaluates the customer inquiry and produces structured lead information.
 
@@ -131,17 +134,17 @@ Example:
 }
 ```
 
-7. Evaluate Lead
+**7. Evaluate Lead**
 
 The workflow applies business logic to determine whether the lead is high priority.
 
-8. Notify Sales Team
+**8. Notify Sales Team**
 
 High-priority leads trigger an internal notification so the appropriate team can follow up.
 
-9. CRM
+**9. Record in CRM**
 
-Customer and lead information is recorded in Google Sheets as the CRM layer.
+Customer and lead information is recorded in Google Sheets as a lightweight CRM layer for this portfolio project.
 
 ---
 
@@ -151,11 +154,11 @@ The workflow uses structured AI output to support business decisions.
 
 The AI can determine:
 
-Customer intent
-Lead score
-Lead priority
-Whether human escalation is required
-Appropriate customer responses
+- Customer intent
+- Lead score
+- Lead priority
+- Human escalation requirement
+- Appropriate customer responses
 
 Structured output helps the workflow reliably pass AI results into downstream automation logic.
 
@@ -193,10 +196,10 @@ Gmail Notification
 
 The error notification includes information such as:
 
-Execution ID
-Error message
-Last node executed
-Execution URL
+- Execution ID
+- Error message
+- Last node executed
+- Execution URL
 
 This provides visibility into automation failures and supports troubleshooting.
 
@@ -235,7 +238,7 @@ The workflow was tested against multiple business scenarios, including:
 | Unknown question              | ✅ PASS              |
 | Unknown + high-intent inquiry | ✅ PASS              |
 | Low-intent inquiry            | ✅ PASS              |
-| Error handling                | ⚠️ Partially tested |
+| Error handling                | ⚠️ PARTIAL |
 
 
 Detailed testing documentation is available in:
@@ -245,15 +248,16 @@ docs/testing.md
 ---
 ## 🛠️ Technology Stack
 
-| Component           | Technology    |
-| ------------------- | ------------- |
-| Automation Platform | n8n           |
-| Hosting             | Render        |
-| AI Model            | Google Gemini |
-| Knowledge Base      | Google Docs   |
-| CRM                 | Google Sheets |
-| Notifications       | Gmail         |
-| Documentation       | GitHub        |
+| Component           | Technology      |
+| ------------------- | --------------- |
+| Automation Platform | n8n             |
+| Hosting             | Render          |
+| AI Model            | Google Gemini   |
+| AI Output           | Structured JSON |
+| Knowledge Base      | Google Docs     |
+| CRM                 | Google Sheets   |
+| Notifications       | Gmail           |
+| Documentation       | GitHub          |
 
 ---
 
@@ -261,13 +265,13 @@ docs/testing.md
 
 This automation demonstrates how AI and workflow automation can help businesses:
 
-Reduce repetitive customer support work
-Improve response consistency
-Identify high-value leads automatically
-Reduce manual lead qualification
-Escalate complex inquiries to humans
-Centralize customer information
-Improve visibility into workflow failures
+- Reduce repetitive customer support work
+- Improve response consistency
+- Identify high-value leads automatically
+- Reduce manual lead qualification
+- Escalate complex inquiries to humans
+- Centralize customer information
+- Improve visibility into workflow failures
 
 The goal is not to replace human support, but to automate repetitive work and help teams focus their time on higher-value interactions.
 
@@ -276,19 +280,16 @@ The goal is not to replace human support, but to automate repetitive work and he
 
 Potential next steps include:
 
-Replace Manual Trigger with a production Webhook
-Connect the CRM to HubSpot or another CRM platform
-Add customer conversation history
-Add automated follow-up emails
-Add lead-status tracking
-Add analytics and reporting
-Add authentication and production security
-Add monitoring and alerting
-Add additional communication channels such as WhatsApp
-Add authentication and input validation
-Add persistent conversation history
-Add retry logic for external service failures
-Add production monitoring
+- Replace manual trigger with a production webhook
+- Connect the CRM to HubSpot or another CRM platform
+- Add persistent conversation history
+- Add automated follow-up emails
+- Add lead-status tracking
+- Add analytics and reporting
+- Add authentication and input validation
+- Add retry logic for external service failures
+- Add production monitoring and alerting
+- Add additional communication channels such as WhatsApp
 
 ---
 ## 📁 Project Structure
